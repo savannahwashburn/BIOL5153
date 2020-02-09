@@ -1,7 +1,7 @@
-### Savannah Washburn 
-sfwashbu@uark.edu
-(262)-443-8116
-915 West Briarbrook Lane Carl Junction, MO 64834 
+#### **Savannah Washburn** 
+> sfwashbu@uark.edu
+> (262)-443-8116
+>915 West Briarbrook Lane Carl Junction, MO 64834 
 --- 
 
 **Education**
