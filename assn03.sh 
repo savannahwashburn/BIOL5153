@@ -1,0 +1,112 @@
+# assn03-1
+#! /bin/bash
+for i in {808..8008}
+do
+	echo "TR: $i" 
+	
+	
+done > assn03_STDOUT.txt
+
+# assn03-2
+cd
+ls -al
+nano .bash_profile
+alias python='python3'
+alias razor='ssh sfwashbu@razor.uark.edu'
+
+# assn03-3
+cd /Users/savannahwashburn/Desktop/gene_trees 
+ls -U | grep -c \.fasta$
+
+# There are 15085 fasta files. 
+
+# assn03-4
+cd /Users/savannahwashburn/Desktop/gene_trees
+ls -U | grep -c \.tre$
+
+# There are 14640 phylogenetic tree files. 
+
+# assn03-5
+cd /Users/savannahwashburn/Desktop/gene_trees
+ls -U | grep -c \.sched$
+
+# There are 15262 analyses that have been run. 
+
+
+
+
+# assn03-6
+cd /Users/savannahwashburn/Desktop/gene_trees 
+for i in *.fasta
+do
+	if [ $i == *raxml* ]; then
+   	      	echo "matching file" 
+	fi
+done > test_match_assn03_6.txt	
+
+for i in \.fasta$
+do
+	if [[ $i != *raxml* ]]; then
+   	      	echo "matching file" 
+	fi
+done > test_match_assn03_6.txt
+
+s1="*.fasta"
+s2="*.tre"
+for i in *.fasta
+do
+	if [ $i != *raxml* ]; then
+	   echo does not match
+	fi
+done > test_no_match_assn03_6.txt
+
+i=$*.fasta
+for i in *.fasta
+do
+	if [[ $i != *.tre ]]; then
+	   echo does not match
+	fi
+done > test_no_match_assn03_6.txt
+
+
+
+
+
+
+
+
+
+
+# assn03-7
+cd /Users/savannahwashburn/Desktop/gene_trees
+for foo in *.sched
+do 
+   if [ $? -eq 0 ]; then 
+      echo success
+   fi
+done > test_success_assn03_7.txt
+wc -l test_success_assn03_7.txt
+
+#There were 15262 successful tests. 
+
+for foo in *.sched
+do 
+   if [ $? != 0 ]; then
+      echo unsuccess
+   fi
+done > test_unsuccess_assn03_7.txt
+wc -l test_unceccess_assn03_7.txt
+
+# There were 0 unsuccessful tests. 
+
+# assn03-8 
+cd /Users/savannahwashburn/Desktop/gene_trees
+for i in no_match_assn03_6.txt
+do
+	write_raxml_job_script.py $i > ${i}_alignment_raxml.tre
+done 
+
+
+#BIOL5153 extra credit 2/17/2020
+
+The reason the command `grep -B1 GGATCC *.fasta | grep -v -B1 GAATTC *.fasta` did not work is because it did not keep the strands that had GGATCC but lacked GAATTC. The output was not being directed into a file, so the output is not being sorted in the correct way in the context of the problem.
