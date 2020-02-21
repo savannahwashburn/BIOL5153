@@ -8,6 +8,7 @@ do
 done > assn03_STDOUT.txt
 
 # assn03-2
+#! /bin/bash
 cd
 ls -al
 nano .bash_profile
@@ -15,27 +16,28 @@ alias python='python3'
 alias razor='ssh sfwashbu@razor.uark.edu'
 
 # assn03-3
+#! /bin/bash
 cd /Users/savannahwashburn/Desktop/gene_trees 
 ls -U | grep -c \.fasta$
 
 # There are 15085 fasta files. 
 
 # assn03-4
+#! /bin/bash
 cd /Users/savannahwashburn/Desktop/gene_trees
 ls -U | grep -c \.tre$
 
 # There are 14640 phylogenetic tree files. 
 
 # assn03-5
+#! /bin/bash 
 cd /Users/savannahwashburn/Desktop/gene_trees
 ls -U | grep -c \.sched$
 
 # There are 15262 analyses that have been run. 
 
-
-
-
 # assn03-6
+#! /bin/bash 
 cd /Users/savannahwashburn/Desktop/gene_trees 
 for i in *.fasta
 do
@@ -68,16 +70,8 @@ do
 	fi
 done > test_no_match_assn03_6.txt
 
-
-
-
-
-
-
-
-
-
 # assn03-7
+#! /bin/bash 
 cd /Users/savannahwashburn/Desktop/gene_trees
 for foo in *.sched
 do 
@@ -99,7 +93,8 @@ wc -l test_unceccess_assn03_7.txt
 
 # There were 0 unsuccessful tests. 
 
-# assn03-8 
+# assn03-8
+#! /bin/bash 
 cd /Users/savannahwashburn/Desktop/gene_trees
 for i in no_match_assn03_6.txt
 do
