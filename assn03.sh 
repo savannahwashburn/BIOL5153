@@ -43,7 +43,7 @@ do
 done > test_no_match_assn03_6.txt
 wc -l test_no_match_assn03_6.txt
 
-#There are 15085 *.fasta files that do not have *.tre files. 
+#There are 445 *.fasta files that do not have *.tre files. 
 
 # assn03-7
 cd /Users/savannahwashburn/Desktop/gene_trees
@@ -55,7 +55,7 @@ do
 done > test_success_assn03_7.txt
 wc -l test_success_assn03_7.txt
 
-#There were 15262 successful tests. 
+#There were 30434 successful tests. 
 
 for foo in *.sched
 do 
@@ -65,7 +65,7 @@ do
 done > test_unsuccess_assn03_7.txt
 wc -l test_unceccess_assn03_7.txt
 
-# There were 0 unsuccessful tests. 
+# There were 243628 unsuccessful tests. 
 
 # assn03-8 
 cd /Users/savannahwashburn/Desktop/gene_trees
