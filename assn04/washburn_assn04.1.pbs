@@ -1,0 +1,14 @@
+#! /bin/bash
+
+#PBS -N BLAST
+#PBS -q student8core
+#PBS -j oe
+#PBS -m abe
+#PBS -M sfwashbu@uark.edu
+#PBS -o BLAST. $washburn_assn04.1.out
+#PBS -1 nodes : ppn=8
+#PBS -1 walltime=00:05:00:00
+
+cd $/Users/savannahwashburn/Desktop/watermelon_files/watermelon_nt module load blast
+
+blastn  
