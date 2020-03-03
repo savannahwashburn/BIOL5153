@@ -6,7 +6,7 @@
 #PBS -m abe
 #PBS -M sfwashbu@uark.edu
 #PBS -e /home/sfwashbu
-#PBS -o washburn_assn04.1.out
+#PBS -o washburn_assn04.8.3.out
 #PBS -l nodes=1:ppn=6
 #PBS -l walltime=00:00:05:00
 
@@ -14,4 +14,4 @@ cd $PBS_O_WORKDIR
 
 module load blast/2.6.0+
 
-blastn -query watermelon_files/watermelon_nt/nad4L.fasta -subject watermelon_files/watermelon_nt/nad4L.fasta -outfmt 6
+blastn -outfmt 6 -reward 5 -penalty -4 -gapopen 8 -gapextend 6 -word_size 7 -query watermelon_files/watermelon.fsa -subject watermelon_files/watermelon.fsa 

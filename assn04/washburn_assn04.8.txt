@@ -1,0 +1,5 @@
+Repeats found in the genome for the default parameters is 470, for the "somewhat sensitive" parameter is 2157, and for the sensitive parameter is 1358.
+
+The size of the smallest repeat under the default parameter is 28, the "somewhat sensitive" parameter is 18, and the sensitive parameter is 33.
+
+The size relates to the sensitivity of the parameter performed on the sequence, so the more sensitive the parameter, the more repeats found in the genome, and the more accurate the output is compared to the database sequence. 
