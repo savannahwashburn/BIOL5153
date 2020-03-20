@@ -1,22 +1,27 @@
 #! /usr/bin/env python3
 
-# define the input file
-infile = "/Users/savannahwashburn/Desktop/watermelon_files/watermelon.gff"
+# define the file
+file = "/Users/savannahwashburn/Desktop/watermelon_files/watermelon.gff"
 
 # create list
 mylist = []
 
 # open the file 
-with open(infile, "r") as watermelon:
+with open(file, "rt") as watermelon:
     for list in watermelon:
-        mylist.append(list)
-        gene = list.rstrip("\n")
-        name = gene.split(",")
-# extract the genes
-        if(name[7] == "Gene"):
-            print.sort(",".join([name[7], name[8]]))
+        name = list.split()[10]
+        # name from line
+        if not name == "similar":
+            #ignore similar
+            mylist.append(name)
 
-infile.close()
+#sort list
+mylist.sort()
+#print list 
+print(mylist) 
+
+
+
 
 
 
