@@ -42,17 +42,18 @@ with open(args.gff, "r") as gff_file:
                     print()
 
             # if it is a CDS feature, then extract the substring/sequence
-            # dna = open(args.fasta, "r")
-            #length = len(str(dna))
+            dna = open(args.fasta, "r")
+            length = len(str(dna))
             
             # calculate and print the GC content for substring to 2 decimal places
-                # calculate the number of each base 
+
+            # calculate the number of each base 
             c_count = dna.count("C")
             g_count = dna.count("G")
-                # calculate the base composiiton
+            # calculate the base composiiton
             gc_content = (c_count + g_count / length)
             gc_round = round(gc_content, 2) 
-            print(gc_round + "\n") 
+            print(gc_round +"\n") 
                 
 # store each line as a list
 list=[]
